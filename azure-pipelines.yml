@@ -13,6 +13,7 @@ stages:
   - job: secondjob
     steps:
       - bash: second  build job
+      - bash : second build job fully completed
 
 - stage: dev
   jobs: 
