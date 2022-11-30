@@ -9,11 +9,11 @@ stages:
   jobs: 
   - job: firstjob
     steps:
-      - bash: first build job
+      - bash: echo first build job
   - job: secondjob
     steps:
-      - bash: second  build job
-      - bash : second build job fully completed
+      - bash: echo second  build job
+      - bash : echo second build job fully completed
 
 
 
