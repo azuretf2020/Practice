@@ -37,6 +37,7 @@ stages:
   variables: 
    environment: preprd
   dependsOn: test
+  dependsOn: dev
   jobs: 
   - job: preprdjobs
     steps:
