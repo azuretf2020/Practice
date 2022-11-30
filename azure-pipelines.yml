@@ -44,12 +44,12 @@ stages:
     steps:
      - bash: echo $(environment) job running 
 - stage: prd
- variables: 
+  variables: 
    environment: preprd
   jobs: 
   - job: prdjob
     steps:
-      - bash: echo prd job running 
+      - bash: echo $(environment) job running 
 
 
 
