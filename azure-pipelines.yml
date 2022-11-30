@@ -10,6 +10,7 @@ stages:
   - job: firstjob
     steps:
       - bash: echo first build job
+      -bash: $(PipelineLevelVariable)
   - job: secondjob
     steps:
       - bash: echo second  build job
@@ -18,33 +19,33 @@ stages:
 
 - stage: dev
   variables: 
-   environment: dev
-   dependsOn: build
+    environment: dev
+  dependsOn: build
   jobs: 
   - job: devjobs
     steps:
-      - bash: echo dev job running 
+      - bash: echo $(environmet) job running 
 
 - stage: test
   variables: 
-   environment: test
-   dependsOn: build
+    environment: test
+  dependsOn: build
   jobs: 
   - job: testjobs
     steps:
-      - bash: echo test job running 
+      - bash: echo $(environment) job running 
+
 - stage: preprd
  variables: 
    environment: preprd
-   dependsOn: test
+  dependsOn: test
   jobs: 
   - job: preprdjobs
     steps:
-      - bash: echo preprd job running 
+      - bash: echo $(environment) job running 
 - stage: prd
  variables: 
    environment: preprd
-   dependsOn: build
   jobs: 
   - job: prdjob
     steps:
