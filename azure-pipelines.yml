@@ -10,7 +10,7 @@ stages:
   - job: firstjob
     steps:
       - bash: echo first build job
-      -bash: $(PipelineLevelVariable)
+      - bash: $(PipelineLevelVariable)
   - job: secondjob
     steps:
       - bash: echo second  build job
@@ -42,7 +42,7 @@ stages:
   jobs: 
   - job: preprdjobs
     steps:
-      - bash: echo $(environment) job running 
+     - bash: echo $(environment) job running 
 - stage: prd
  variables: 
    environment: preprd
