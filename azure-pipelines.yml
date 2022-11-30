@@ -30,11 +30,11 @@ stages:
   - job: preprdjobs
     steps:
       - bash: tpreprd job running 
-- stage: test
+- stage: prd
   jobs: 
-  - job: testjobs
+  - job: prdjob
     steps:
-      - bash: test job running 
+      - bash: prd job running 
 
 
 
