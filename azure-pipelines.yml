@@ -36,7 +36,7 @@ stages:
       - bash: echo $(environment) job running 
 
 - stage: preprd
- variables: 
+  variables: 
    environment: preprd
   dependsOn: test
   jobs: 
