@@ -16,6 +16,30 @@ stages:
       - bash : echo second build job fully completed
 
 
+- stage: dev
+  jobs: 
+  - job: devjobs
+    steps:
+      - bash: echo dev job running 
+
+- stage: test
+  jobs: 
+  - job: testjobs
+    steps:
+      - bash: echo test job running 
+- stage: preprd
+  jobs: 
+  - job: preprdjobs
+    steps:
+      - bash: echo preprd job running 
+- stage: prd
+  jobs: 
+  - job: prdjob
+    steps:
+      - bash: echo prd job running 
+
+
+
 
 
   
