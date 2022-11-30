@@ -15,14 +15,27 @@ stages:
       - bash: second  build job
 
 - stage: dev
-jobs: 
-  - job: dev jobs
+  jobs: 
+  - job: devjobs
     steps:
       - bash: dev job running 
 
 - stage: test
-- stage: preprod
-- stage: prd
+  jobs: 
+  - job: testjobs
+    steps:
+      - bash: test job running 
+- stage: preprd
+  jobs: 
+  - job: preprdjobs
+    steps:
+      - bash: tpreprd job running 
+- stage: test
+  jobs: 
+  - job: testjobs
+    steps:
+      - bash: test job running 
+
 
 
 
