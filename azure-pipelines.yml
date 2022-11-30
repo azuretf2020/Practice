@@ -14,7 +14,7 @@ jobs:
 - job: job2
   steps:
   - script: echo job2!
-    displayName: 'Run a one-line script'
+  
 
 
   
