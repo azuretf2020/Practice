@@ -10,7 +10,7 @@ stages:
   - job: firstjob
     steps:
       - bash: first build job
-  - job: firstjob
+  - job: secondjob
     steps:
       - bash: second  build job
 
