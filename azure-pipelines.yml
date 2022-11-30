@@ -12,7 +12,7 @@ stages:
   - job: firstjob
     steps:
       - bash: echo first build job
-      - bash: $(PipelineLevelVariable)
+      - bash: $(environment) running
   - job: secondjob
     steps:
       - bash: echo second  build job
