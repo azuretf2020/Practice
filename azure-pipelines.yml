@@ -6,6 +6,8 @@ pool:
 
 stages:
 - stage: build
+  variables:
+    environment: build
   jobs: 
   - job: firstjob
     steps:
