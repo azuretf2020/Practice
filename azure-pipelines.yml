@@ -1,9 +1,7 @@
 trigger:
 - main
-
 pool:
   vmImage: ubuntu-latest
-
 stages:
 - stage: build
   variables:
@@ -12,13 +10,11 @@ stages:
   - job: firstjob
     steps:
       - bash: echo first build job
-      - bash: $(environment) running
+      - bash: echo $(environment) running
   - job: secondjob
     steps:
       - bash: echo second  build job
       - bash: echo second build job fully completed
-
-
 - stage: dev
   variables: 
     environment: dev
