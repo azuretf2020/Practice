@@ -15,28 +15,6 @@ stages:
       - bash: second  build job
       - bash : second build job fully completed
 
-- stage: dev
-  jobs: 
-  - job: devjobs
-    steps:
-      - bash: dev job running 
-
-- stage: test
-  jobs: 
-  - job: testjobs
-    steps:
-      - bash: test job running 
-- stage: preprd
-  jobs: 
-  - job: preprdjobs
-    steps:
-      - bash: tpreprd job running 
-- stage: prd
-  jobs: 
-  - job: prdjob
-    steps:
-      - bash: prd job running 
-
 
 
 
