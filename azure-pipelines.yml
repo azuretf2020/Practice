@@ -20,13 +20,13 @@ stages:
   - job: devjobs
     steps:
       - bash: echo "Start devDeploy job"
-  -  deployment: devDeployJob
-     envionment: Dev
-     strategy:
-       runOnce
-         deploy:
-           steps:
-           -script: echo deploy to dev
+  - deployment: devDeployJob
+    envionment: Dev
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          -script: echo deploy to dev
 - stage: test
   variables: 
     environment: test
