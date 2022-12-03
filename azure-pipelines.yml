@@ -9,6 +9,10 @@ stages:
   jobs: 
   - job: firstjob
     steps:
+      - bash: echo $(Build.BuildId)
+      - bash: echo $(Build.SourcesDiretory)
+      - bash: echo $(Build.SourceBranchName)
+      - bash: echo $(Build.Number)
       - bash: echo first build job
       - bash: echo $(environment) running
   - job: secondjob
