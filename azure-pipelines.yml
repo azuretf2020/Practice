@@ -9,25 +9,24 @@ stages:
   jobs: 
   - job: firstjob
     steps:
-      - bash: echo $(Build.BuildId)
-      - bash: echo $(Build.SourcesDiretory)
-      - bash: echo $(Build.SourceBranchName)
-      - bash: echo $(Build.Number)
       - bash: echo first build job
       - bash: echo $(environment) running
   - job: secondjob
     steps:
       - bash: echo second  build job
       - bash: echo second build job fully completed
-- stage: dev
-  variables: 
-    environment: dev
-  dependsOn: build
+- stage: devDeploy
   jobs: 
   - job: devjobs
     steps:
-      - bash: echo $(environmet) job running 
-
+      - bash: echo "Start devDeploy job"
+  -  deployment: devDeployJob
+     envionment: Dev
+     strategy:
+       runOnce
+         deploy:
+           steps:
+           -script: echo deploy to dev
 - stage: test
   variables: 
     environment: test
