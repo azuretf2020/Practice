@@ -44,26 +44,32 @@ stages:
   dependsOn: dev
 
 - stage: preprd
-    jobs: 
+  jobs: 
   - job: devjobs
     steps:
       - bash: echo "Start devDeploy job"
-  - deployment: devDeployJob
-    environment: Dev
+  - deployment: preprdDeployJob
+    environment: preprd
     strategy:
       runOnce:
         deploy:
           steps:
           - script: echo deploy to dev
- dependsOn: dev
+ dependsOn: test
 
 - stage: prd
-  variables: 
-   environment: preprd
   jobs: 
-  - job: prdjob
+  - job: devjobs
     steps:
-      - bash: echo $(environment) job running 
+      - bash: echo "Start prdDeploy job"
+  - deployment: devDeployJob
+    environment: prd
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo deploy to dev
+ dependsOn: pprd
 
 
 
