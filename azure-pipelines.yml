@@ -16,7 +16,7 @@ stages:
       - bash: echo second  build job
       - bash: echo second build job fully completed
 
-- stage: devDeploy
+- stage: dev
   jobs: 
   - job: devjobs
     steps:
