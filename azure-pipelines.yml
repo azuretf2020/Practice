@@ -55,7 +55,7 @@ stages:
         deploy:
           steps:
           - script: echo deploy to dev
- dependsOn: test
+ dependsOn: dev
 
 - stage: prd
   variables: 
