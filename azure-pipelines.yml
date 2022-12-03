@@ -43,7 +43,7 @@ stages:
           - script: echo deploy to dev
   dependsOn: dev
 
-- stage: preprd
+- stage: pprd
   jobs: 
   - job: devjobs
     steps:
