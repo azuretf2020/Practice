@@ -25,8 +25,8 @@ stages:
     strategy:
       runOnce:
         deploy:
-          steps:
-          -script: echo deploy to dev
+         steps:
+        -script: echo deploy to dev
 - stage: test
   variables: 
     environment: test
