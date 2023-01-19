@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'kundan-connection'
+    backendAzureRmResourceGroupName: 'Kundan-rc-grp'
+    backendAzureRmStorageAccountName: 'kundatflogs'
+    backendAzureRmContainerName: 'kundancontainer'
+    backendAzureRmKey: '8dy8Q~wueci6NtfJRJZXuQeX4t2dmke_3ARmHcj0'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    environmentServiceNameAzureRM: 'kundan-connection'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
