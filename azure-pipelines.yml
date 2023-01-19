@@ -22,4 +22,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
+    environmentServiceNameAzureRM: 'kundan-connection'
 
