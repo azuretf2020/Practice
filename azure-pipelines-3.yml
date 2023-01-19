@@ -12,13 +12,4 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'validate'
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    environmentServiceNameAzureRM: 'kundan-connection'
 
