@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rcGrp" {
-    name = "${terraform.workspace}-rcGrp"
+    name = kundan-rcGrp"
     location = "North Europe"
 }
