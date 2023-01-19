@@ -21,7 +21,7 @@ steps:
     backendAzureRmResourceGroupName: 'Kundan-rc-grp'
     backendAzureRmStorageAccountName: 'kundatflogs'
     backendAzureRmContainerName: 'kundancontainer'
-    backendAzureRmKey: '/nZ/JeKablKJyj0y2SEKQWenHhZwVnghvPfRsK/vBhbf10NghUE3GX8JoxEyG1dNCFSOzWCi1mJR+AStJ8kzxA=='
+    backendAzureRmKey: 'kundancontainer/terraform.tfstate'
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
