@@ -22,7 +22,7 @@ pool:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    environmentServiceNameAzureRM: 'kundan-connection'
+    commandOptions: '-out main.tfplan'
 - task: TerraformTaskV3@3
   inputs:
     provider: 'azurerm'
