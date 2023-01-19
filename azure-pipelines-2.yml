@@ -9,21 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-- task: TerraformTaskV3@3
+ - task: TerraformTaskV3@3
   inputs:
-    provider: 'azurerm'
-    command: 'init'
-    backendServiceArm: 'kundan-connection'
-    backendAzureRmResourceGroupName: 'Kundan-rc-grp'
-    backendAzureRmStorageAccountName: 'kundatflogs'
-    backendAzureRmContainerName: 'kundancontainer'
-    backendAzureRmKey: '8dy8Q~wueci6NtfJRJZXuQeX4t2dmke_3ARmHcj0'
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'plan'
-    commandOptions: '-out main.tfplan'
-- task: TerraformTaskV3@3
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
+  
+
