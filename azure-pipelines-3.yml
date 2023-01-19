@@ -27,3 +27,8 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'kundan-connection'
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'kundan-connection'
