@@ -18,3 +18,7 @@ steps:
     backendAzureRmContainerName: 'kundancontainer'
     backendAzureRmKey: '/nZ/JeKablKJyj0y2SEKQWenHhZwVnghvPfRsK/vBhbf10NghUE3GX8JoxEyG1dNCFSOzWCi1mJR+AStJ8kzxA=='
 
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
