@@ -12,4 +12,9 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'kundan-connection'
+    backendAzureRmResourceGroupName: 'Kundan-rc-grp'
+    backendAzureRmStorageAccountName: 'kundatflogs'
+    backendAzureRmContainerName: 'kundancontainer'
+    backendAzureRmKey: '/nZ/JeKablKJyj0y2SEKQWenHhZwVnghvPfRsK/vBhbf10NghUE3GX8JoxEyG1dNCFSOzWCi1mJR+AStJ8kzxA=='
 
