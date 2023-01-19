@@ -39,7 +39,6 @@ steps:
 - stage: Test
   jobs:
   - job: TestJob
-steps:
 - task: TerraformInstaller@0
   inputs:
     terraformVersion: 'latest'
